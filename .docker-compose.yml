@@ -1,0 +1,9 @@
+version: "3"
+services:
+  email-verifier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    network_mode: "host" # Optional: Use host network mode if needed
