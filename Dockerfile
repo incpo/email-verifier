@@ -25,8 +25,8 @@ COPY --from=builder /app/apiserver /app/apiserver
 # Set the working directory
 WORKDIR /app
 
-# # Expose the port (assuming the API server listens on 8080)
-# EXPOSE 8081
+# Expose the port (API server listens on 8081 as configured in main.go)
+EXPOSE 8081
 
 # Run the binary
 CMD ["./apiserver"]
