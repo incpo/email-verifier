@@ -25,8 +25,8 @@ COPY --from=builder /app/apiserver /app/apiserver
 # Set the working directory
 WORKDIR /app
 
-# Expose the port (assuming the API server listens on 8080)
-EXPOSE 8080
+# # Expose the port (assuming the API server listens on 8080)
+# EXPOSE 8081
 
 # Run the binary
 CMD ["./apiserver"]
