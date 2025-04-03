@@ -13,7 +13,7 @@ import (
 )
 
 func GetEmailVerification(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	verifier := emailVerifier.NewVerifier()
+	verifier := emailVerifier.NewVerifier().EnableAutoUpdateDisposable().EnableSMTPCheck()
 	ret, err := verifier.Verify(ps.ByName("email"))
 	if err != nil {
 		http.Error(w, err.Error(), 500)
