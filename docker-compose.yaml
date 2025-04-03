@@ -5,5 +5,5 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8081:8081"
+      - "8082:8080"
     network_mode: "host" # Optional: Use host network mode if needed
